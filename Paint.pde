@@ -8,7 +8,7 @@ Mapa mapa = new Mapa();
 public void settings(){
   System.setProperty("jogl.disable.openglcore", "true");
   size(800, 800);
-  //fullScreen(PR2);
+  //fullScreen(PR3);
 }
 
 void setup(){
