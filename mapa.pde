@@ -29,10 +29,6 @@ class Mapa{
     {
       limpiarPantalla();
       mapa.remove(mapa.size()-1);
-      for(int i = 0; i < mapa.size(); ++i)
-      {
-        mapa.get(i).Draw();
-      }
     }
     else
     {
