@@ -1,14 +1,14 @@
 ArrayList<Button> botones;
 ArrayList<PVector> colores;
 int undoCounter = -1;
-int separacionEntreBotones = 5, separacionEntreBotonesColor = 2, altoboton, altobotoncolor = 120, strokeWidth = 3;
+int separacionEntreBotones = 5, separacionEntreBotonesColor = 2, altoboton, altobotoncolor = 120, strokeWidth = 3, contImage = 0;
 PVector lineStart, lineEnd, colorActual;
 Mapa mapa = new Mapa();
 
-public void settings(){
+void settings(){
   System.setProperty("jogl.disable.openglcore", "true");
-  size(800, 800);
-  //fullScreen(PR3);
+  //size(600, 600);
+  fullScreen();
 }
 
 void setup(){
@@ -101,7 +101,8 @@ void runAction(Button boton)
       mapa.renovarMapa();
       break;
     case "Guardar":
-      //saveFrame();
+      saveFrame("imagen_"+ contImage +".png");
+      ++contImage;
       break;
     case "Enviar":
       
